@@ -1,0 +1,33 @@
+nav{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background-color: palevioletred;
+}
+
+.nav-bar-links {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    left: calc(100% / 10);
+}
+
+.nav-bar-links ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.nav-bar-links ul li a:hover{
+    color: pink;
+}

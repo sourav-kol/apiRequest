@@ -1,0 +1,53 @@
+:root{
+    --toastify-color-info:palevioletred;
+}
+
+.App{
+    width:100%;
+    min-height: 100vh;
+}
+
+section{
+    width: 70%;
+    min-width: 300px;
+    min-height: 100vh;
+    position: relative;
+    left: calc(100% / 7);
+    background-color: rgb(255, 235, 241);
+}
+
+.content{
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    height: 100%;
+}
+
+.list-container{
+    width: 95%;
+    min-height: 15vh;
+    position: relative;
+    margin-top: 10px;
+    left: calc(100%/35);
+    background-color: rgb(253, 205, 213);
+    border: 1px solid palevioletred;
+    border-radius: 5px;
+}
+
+.list-container h1, .list-container h3{
+    color: rgb(31, 30, 30);
+    position: relative;
+    left: 2vh;
+    padding: 5px;
+}
+
+.list-container h1 {
+    font-size: 20px;
+}
+
+.list-container h3{
+    font-size: 15px;
+}
+
+
+
