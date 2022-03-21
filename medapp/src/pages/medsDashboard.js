@@ -35,8 +35,12 @@ export function MedDashboard() {
     useEffect(() => {
         MedAPIurl.get('posts')
             .then(resolve => {
-                setMedData(resolve.data)
-                // setCurrPageItems(medData.slice(0, PER_PAGE_COUNT))
+                //returing this passes it on to the next then block of the promise
+                return resolve.data
+            })
+            .then(data =>{
+                paginate(data)
+                setMedData(data)
             })
             .catch(error => {
                 console.log(error)
@@ -46,10 +50,13 @@ export function MedDashboard() {
 
     //slice(currentPage*perPage, (currentPage*perPage)+perPage)
     //paginate
-    useEffect(() => {
-        if (medData.length !== 0) {
-            setCurrPageItems(medData.slice(currentPage * PER_PAGE_COUNT, (currentPage * PER_PAGE_COUNT) + PER_PAGE_COUNT))
+    const paginate = (data)=>{
+        if (data.length !== 0) {
+            setCurrPageItems(data.slice(currentPage * PER_PAGE_COUNT, (currentPage * PER_PAGE_COUNT) + PER_PAGE_COUNT))
         }
+    }
+    useEffect(() => {
+        paginate(medData)
     }, [currentPage])
 
     return <><div className="content med-content" >
