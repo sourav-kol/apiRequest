@@ -1,4 +1,4 @@
 import axios from 'axios'
 
-export const MedAPIurl = axios.create({baseURL:'https://dev.dashmed.in/'})
+export const MedAPIurl = axios.create({baseURL:'https://jsonplaceholder.typicode.com/'})
 

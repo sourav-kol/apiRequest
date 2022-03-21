@@ -12,15 +12,16 @@ section{
     min-width: 300px;
     min-height: 100vh;
     position: relative;
+    top: 75px;
     left: calc(100% / 7);
     background-color: rgb(255, 235, 241);
 }
 
 .content{
     position: relative;
-    top: 10vh;
     width: 100%;
     height: 100%;
+    padding: 10px 0px 10px 0px;
 }
 
 .list-container{
@@ -37,8 +38,7 @@ section{
 .list-container h1, .list-container h3{
     color: rgb(31, 30, 30);
     position: relative;
-    left: 2vh;
-    padding: 5px;
+    padding: 0px 1px 0vh 1vh;
 }
 
 .list-container h1 {
@@ -47,6 +47,34 @@ section{
 
 .list-container h3{
     font-size: 15px;
+}
+
+.btn{
+    all: unset;
+    z-index: 5;
+    width: 60px;
+    height: 25px;
+    position: absolute;
+    top: 10.5vh;
+    border: 1px solid palevioletred;
+    text-align: center;
+}
+
+.next-btn{
+    left:10px
+}
+
+.prev-btn{
+    right: 10px;
+}
+
+.loader{
+    font-size:30px;
+    color: black;
+    position: absolute;
+    top: 140px;
+    text-align: center;
+    left: 40%;
 }
 
 
